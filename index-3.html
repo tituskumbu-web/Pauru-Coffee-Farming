@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Origin Peak Coffee Farms | Sustainable Coffee Farming</title>
+  <meta name="description" content="Discover the art and science of sustainable coffee farming at Origin Peak. From highland slopes to your cup — traceable, regenerative, exceptional coffee.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brown-dark: #2C1A12;
+      --brown: #4A2C1A;
+      --brown-mid: #6B4423;
+      --coffee: #8B5E3C;
+      --cream: #F7F1E9;
+      --cream-dark: #EDE4D7;
+      --green: #3D5A3C;
+      --green-light: #5C7A5A;
+      --gold: #C4A35A;
+      --text: #2C1A12;
+      --text-muted: #5C4A3A;
+      --white: #FFFFFF;
+      --shadow: 0 12px 40px rgba(44, 26, 18, 0.12);
+      --radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.65;
+      font-weight: 400;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--brown-dark);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s ease;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(247, 241, 233, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(74, 44, 26, 0.08);
+      transition: box-shadow 0.3s ease;
+    }
+
+    header.scrolled {
+      box-shadow: 0 4px 24px rgba(44, 26, 18, 0.08);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--brown-dark);
+      letter-spacing: 0.02em;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--brown);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--cream);
+      font-size: 1.1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links a:hover {
+      color: var(--brown);
+    }
+
+    .nav-cta {
+      background: var(--brown);
+      color: var(--cream) !important;
+      padding: 0.55rem 1.25rem;
+      border-radius: 999px;
+      font-size: 0.85rem !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--brown-dark);
+      color: var(--cream) !important;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--brown-dark);
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 80px;
+      background:
+        linear-gradient(135deg, rgba(44, 26, 18, 0.55) 0%, rgba(61, 90, 60, 0.35) 100%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="%233D5A3C"/><stop offset="50%" stop-color="%234A2C1A"/><stop offset="100%" stop-color="%232C1A12"/></linearGradient></defs><rect fill="url(%23g)" width="1200" height="800"/><circle cx="200" cy="150" r="80" fill="%235C7A5A" opacity="0.15"/><circle cx="900" cy="600" r="120" fill="%236B4423" opacity="0.2"/><ellipse cx="600" cy="400" rx="300" ry="180" fill="%238B5E3C" opacity="0.12"/></svg>') center/cover no-repeat;
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      max-width: 640px;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.6rem, 5.5vw, 4rem);
+      color: var(--cream);
+      margin-bottom: 1.25rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      font-weight: 300;
+      opacity: 0.92;
+      margin-bottom: 2.25rem;
+      max-width: 520px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--brown-dark);
+    }
+
+    .btn-primary:hover {
+      background: #d4b36a;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--cream);
+      border: 1.5px solid rgba(247, 241, 233, 0.5);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(247, 241, 233, 0.12);
+      border-color: var(--cream);
+    }
+
+    /* Section common */
+    section {
+      padding: 100px 0;
+    }
+
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--coffee);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      margin-bottom: 1.25rem;
+    }
+
+    .section-lead {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin-bottom: 3rem;
+    }
+
+    /* About */
+    .about {
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-visual {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      background: linear-gradient(160deg, var(--green) 0%, var(--brown) 100%);
+      box-shadow: var(--shadow);
+    }
+
+    .about-visual-inner {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2rem;
+      background: linear-gradient(to top, rgba(44,26,18,0.7) 0%, transparent 55%);
+      color: var(--cream);
+    }
+
+    .about-visual-inner h3 {
+      color: var(--cream);
+      font-size: 1.6rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .about-visual-inner p {
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .stat {
+      text-align: left;
+    }
+
+    .stat-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: var(--brown);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+    }
+
+    /* Process */
+    .process {
+      background: var(--cream);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.75rem;
+    }
+
+    .process-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.5rem;
+      box-shadow: 0 4px 20px rgba(44, 26, 18, 0.06);
+      border: 1px solid rgba(74, 44, 26, 0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .process-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .process-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .process-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .process-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    /* Farming deep dive */
+    .farming {
+      background: var(--brown-dark);
+      color: var(--cream);
+    }
+
+    .farming .section-label {
+      color: var(--gold);
+    }
+
+    .farming .section-title {
+      color: var(--cream);
+    }
+
+    .farming .section-lead {
+      color: rgba(247, 241, 233, 0.75);
+    }
+
+    .farming-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .farming-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius);
+      padding: 2rem 1.75rem;
+    }
+
+    .farming-card h3 {
+      color: var(--cream);
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .farming-card p {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      margin-bottom: 1rem;
+    }
+
+    .farming-card ul {
+      list-style: none;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .farming-card li {
+      padding: 0.3rem 0;
+      padding-left: 1.1rem;
+      position: relative;
+    }
+
+    .farming-card li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.7rem;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, var(--green) 0%, var(--brown) 100%);
+      color: var(--cream);
+      text-align: center;
+      padding: 90px 0;
+    }
+
+    .cta h2 {
+      color: var(--cream);
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      opacity: 0.9;
+      max-width: 480px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--brown-dark);
+      color: rgba(247, 241, 233, 0.7);
+      padding: 60px 0 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand .logo {
+      color: var(--cream);
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      max-width: 280px;
+      line-height: 1.7;
+    }
+
+    .footer-col h4 {
+      color: var(--cream);
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      margin-bottom: 1.1rem;
+      letter-spacing: 0.03em;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 0.55rem;
+    }
+
+    .footer-col a {
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(247, 241, 233, 0.1);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .about-grid,
+      .process-grid,
+      .farming-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .about-stats {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 110px 0 70px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container nav">
+      <a href="#home" class="logo">
+        <span class="logo-mark">◉</span>
+        Origin Peak
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#farming">Farming</a></li>
+          <li><a href="#contact" class="nav-cta">Visit the Farm</a></li>
+        </ul>
+        <button class="menu-toggle" aria-label="Menu" id="menuToggle">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-eyebrow">Highland Coffee Estates · Est. 1987</span>
+        <h1>Where Elevation Meets Exceptional Coffee</h1>
+        <p>We cultivate, harvest, and process specialty coffee on regenerative highland farms. Every bean tells a story of soil, altitude, and careful hands.</p>
+        <div class="hero-actions">
+          <a href="#about" class="btn btn-primary">Discover Our Story</a>
+          <a href="#farming" class="btn btn-secondary">About Coffee Farming</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-visual-inner">
+            <h3>1,450–1,800 m</h3>
+            <p>Ideal elevation for slow maturation and complex flavor</p>
+          </div>
+        </div>
+        <div>
+          <p class="section-label">Our Estate</p>
+          <h2 class="section-title">Rooted in the Highlands</h2>
+          <p class="section-lead">Origin Peak is a family-operated coffee farm dedicated to regenerative agriculture and transparent sourcing. We grow Arabica on volcanic soils under shade canopies that protect biodiversity and build long-term resilience.</p>
+          <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Our work begins long before the harvest: selecting resilient varieties, nurturing living soil, and partnering with neighboring smallholders who share our standards for quality and environmental care.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <div class="stat-value">38</div>
+              <div class="stat-label">Hectares under shade</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">12</div>
+              <div class="stat-label">Partner farms</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value">4</div>
+              <div class="stat-label">Process methods</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="process" id="process">
+    <div class="container">
+      <p class="section-label">From Seed to Cup</p>
+      <h2 class="section-title">The Journey of Our Coffee</h2>
+      <p class="section-lead">Every stage is intentional — from nursery to drying patio — so the final cup reflects the place it was grown.</p>
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-num">01</div>
+          <h3>Nursery & Planting</h3>
+          <p>Seeds from selected mother trees are raised in shaded nurseries. Seedlings are transplanted at the right altitude and soil conditions for optimal development.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-num">02</div>
+          <h3>Shade-Grown Cultivation</h3>
+          <p>Coffee thrives under a diverse canopy of native trees. Shade moderates temperature, reduces water stress, and supports birds and beneficial insects.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-num">03</div>
+          <h3>Selective Harvest</h3>
+          <p>Only ripe cherries are hand-picked in multiple passes. Selective harvesting preserves quality and ensures consistent sugar and flavor development.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-num">04</div>
+          <h3>Processing & Drying</h3>
+          <p>Cherries are processed using washed, natural, honey, or experimental methods. Careful drying on raised beds locks in clarity and complexity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Coffee Farming -->
+  <section class="farming" id="farming">
+    <div class="container">
+      <p class="section-label">Knowledge</p>
+      <h2 class="section-title">About Coffee Farming</h2>
+      <p class="section-lead">Coffee farming is both agriculture and craft. Understanding the plant, climate, and post-harvest work is essential to producing specialty-grade beans.</p>
+      <div class="farming-grid">
+        <div class="farming-card">
+          <h3>The Coffee Plant</h3>
+          <p>Coffea arabica prefers elevations above 1,000 m, mild temperatures, and well-drained volcanic or loamy soils. It takes 3–4 years for a tree to produce its first commercial crop.</p>
+          <ul>
+            <li>Arabica vs. Robusta varieties</li>
+            <li>Flowering and cherry development</li>
+            <li>Pruning for health and yield</li>
+          </ul>
+        </div>
+        <div class="farming-card">
+          <h3>Climate & Terroir</h3>
+          <p>Altitude, rainfall patterns, temperature swings, and soil chemistry shape acidity, body, and aromatic compounds. Highland microclimates often produce the most distinctive cups.</p>
+          <ul>
+            <li>Elevation and maturation speed</li>
+            <li>Shade vs. full-sun systems</li>
+            <li>Water management & drought resilience</li>
+          </ul>
+        </div>
+        <div class="farming-card">
+          <h3>Regenerative Practices</h3>
+          <p>Healthy farms build soil organic matter, protect watersheds, and maintain biodiversity. Compost, cover crops, and integrated pest management reduce reliance on external inputs.</p>
+          <ul>
+            <li>Living soil & composting</li>
+            <li>Biodiversity corridors</li>
+            <li>Carbon and water stewardship</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="container">
+      <h2>Experience the Farm</h2>
+      <p>Schedule a visit, request a sample lot, or learn how we partner with roasters who value origin and transparency.</p>
+      <a href="mailto:hello@originpeak.farm" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="logo">
+            <span class="logo-mark">◉</span>
+            Origin Peak
+          </a>
+          <p>Specialty coffee grown with care on regenerative highland estates. Traceable, seasonal, and crafted for excellence.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#about">Our Estate</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#farming">Coffee Farming</a></li>
+            <li><a href="#contact">Visit</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Farming</h4>
+          <ul>
+            <li><a href="#farming">The Plant</a></li>
+            <li><a href="#farming">Terroir</a></li>
+            <li><a href="#farming">Regeneration</a></li>
+            <li><a href="#process">Harvest</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@originpeak.farm">hello@originpeak.farm</a></li>
+            <li>Highland Estates</li>
+            <li>Open by appointment</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Origin Peak Coffee Farms. All rights reserved.</span>
+        <span>Grown with care · Roasted with respect</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Subtle header shadow on scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
+</body>
+</html>
